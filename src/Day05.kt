@@ -1,5 +1,14 @@
 fun main() {
 
+    fun parseInput(input: List<String>) {
+        val inventorySize = input.indexOfFirst { it.isEmpty() }
+        var (boxes, commands) = input.partition { input.indexOf(it) <= inventorySize }
+        boxes = boxes.reversed().drop(2)
+
+        println(boxes)
+        println(commands)
+    }
+
     fun part1(input: List<String>): Int {
         var score = 0
 
@@ -26,4 +35,5 @@ fun main() {
     println(part1(input))
     println("Part 2:")
     println(part2(input))
+    println(parseInput(testInput))
 }

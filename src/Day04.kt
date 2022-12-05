@@ -2,27 +2,11 @@ fun main() {
 
     fun part1(input: List<String>): Int {
         var score = 0
-        for (line in input) {
-            val elves = line.split(',')
-            val elfA = elves[0].split('-')
-            val elfB = elves[1].split('-')
-            if ((elfA[0].toInt() <= elfB[0].toInt() && elfA[1].toInt() >= elfB[1].toInt()) ||
-                    (elfB[0].toInt() <= elfA[0].toInt() && elfB[1].toInt() >= elfA[1].toInt())) {
-                score++
-            }
-        }
         return score
     }
 
     fun part2(input: List<String>): Int {
         var score = 0
-        for (line in input) {
-            val elves = line.split(',')
-            val elfA = elves[0].split('-')
-            val elfB = elves[1].split('-')
-            if (elfA[1].toInt() >= elfB[0].toInt() && elfA[0].toInt() <= elfB[1].toInt() ||
-                elfB[1].toInt() >= elfA[0].toInt() && elfB[0].toInt() <= elfA[1].toInt()) score++
-        }
         return score
     }
 
