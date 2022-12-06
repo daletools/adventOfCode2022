@@ -1,5 +1,5 @@
 fun main() {
-
+    TODO("make it work")
     fun parseInput(input: List<String>) {
         val inventorySize = input.indexOfFirst { it.isEmpty() }
         var (boxes, commands) = input.partition { input.indexOf(it) <= inventorySize }
